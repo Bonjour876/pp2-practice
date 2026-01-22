@@ -1,2 +1,2 @@
-# PP2 Practice
-Student: Tamerlan Zhylkybay
+# pp2-practice
+coding
