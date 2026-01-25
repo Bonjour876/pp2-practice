@@ -29,3 +29,7 @@ print(x12, " this is bytes type")
 print(x13, " this is bytearray type")
 print(x14, " this is memoryview type")
 print(x15, " this is NoneType type")
+
+
+
+
