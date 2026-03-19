@@ -1,0 +1,5 @@
+Apple 2.50
+Bread 1.20
+Milk 3.00
+Date: 2026-03-20
+Payment: Cash
