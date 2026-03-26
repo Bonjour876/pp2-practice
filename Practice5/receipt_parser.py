@@ -18,5 +18,7 @@ print("split:", re.split(r"\s+", text))
 # sub > replaces spaces with "-"
 print("sub:", re.sub(r"\s+", "-", text))
 
-# match > checks match at the beginning of the text
+# match > checks match at the beginning of the text 
+#It checks for a match only at the beginning of the string.
+
 print("match:", re.match(r"[A-Za-z]+", text))

@@ -1,5 +1,5 @@
 # create_list_dirs.py
-# keywords: os, mkdir, listdir, getcwd
+# os, mkdir, listdir, getcwd
 
 import os  # module to work with files and folders
 
