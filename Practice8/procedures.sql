@@ -27,7 +27,7 @@ BEGIN
     END IF;
 
     FOR i IN 1..array_length(p_names,1) LOOP
-        -- вставляем или обновляем, если уже есть
+        
         IF EXISTS (SELECT 1 FROM phonebook WHERE name = p_names[i]) THEN
             UPDATE phonebook SET phone = p_phones[i] WHERE name = p_names[i];
         ELSE
