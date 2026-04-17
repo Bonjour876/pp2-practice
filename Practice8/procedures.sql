@@ -28,11 +28,19 @@ BEGIN
 
     FOR i IN 1..array_length(p_names,1) LOOP
         
-        IF EXISTS (SELECT 1 FROM phonebook WHERE name = p_names[i]) THEN
-            UPDATE phonebook SET phone = p_phones[i] WHERE name = p_names[i];
-        ELSE
-            INSERT INTO phonebook(name, phone) VALUES (p_names[i], p_phones[i]);
+        IF p_phones[i] !~ '^[0-9]+$' THEN
+            RAISE EXCEPTION 'Invalid phone number: %', p_phones[i];
         END IF;
+
+        IF EXISTS (SELECT 1 FROM phonebook WHERE name = p_names[i]) THEN
+            UPDATE phonebook 
+            SET phone = p_phones[i] 
+            WHERE name = p_names[i];
+        ELSE
+            INSERT INTO phonebook(name, phone) 
+            VALUES (p_names[i], p_phones[i]);
+        END IF;
+
     END LOOP;
 END;
 $$;
