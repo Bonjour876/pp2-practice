@@ -52,8 +52,7 @@ while True:
 
             # phone validation
             if not phone.isdigit():
-                print("Incorrect number.
-                      ")
+                print("Incorrect number.")
                 continue
 
             names.append(name)

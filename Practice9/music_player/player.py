@@ -48,4 +48,5 @@ class MusicPlayer:
         if not self.is_playing or self.track_duration == 0:
             return 0
         # calculate percentage (0.0 to 1.0)
-        current_pos = pygame.mixer
+        current_pos = pygame.mixer.music.get_pos() / 1000
+        return min(current_pos / self.track_duration, 1.0)
