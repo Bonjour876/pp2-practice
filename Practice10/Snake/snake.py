@@ -25,7 +25,6 @@ class SnakeScene(SceneBase):
     def __init__(self):
         SceneBase.__init__(self)
         self.cell_size = 20
-        # Координаты: голова [0], потом хвост
         self.snake = [[100, 100], [80, 100], [60, 100]]
         self.direction = pygame.K_RIGHT 
         self.food_pos = self.generate_food()
@@ -53,7 +52,6 @@ class SnakeScene(SceneBase):
                 elif event.key == pygame.K_RIGHT and self.direction != pygame.K_LEFT:
                     self.direction = pygame.K_RIGHT
                 
-                # Рестарт на R
                 if self.game_over and event.key == pygame.K_r:
                     self.__init__()
 
@@ -79,7 +77,6 @@ class SnakeScene(SceneBase):
         if new_head == self.food_pos:
             self.score += 1
             self.food_pos = self.generate_food()
-            # Уровни: каждые 3 очка ускоряемся
             if self.score % 3 == 0:
                 self.level += 1
                 self.speed += 2 
@@ -87,7 +84,7 @@ class SnakeScene(SceneBase):
             self.snake.pop()
 
     def Render(self, screen):
-        screen.fill((30, 30, 30)) # Фон
+        screen.fill((30, 30, 30)) 
         
 
         pygame.draw.rect(screen, (255, 0, 0), (self.food_pos[0], self.food_pos[1], self.cell_size-1, self.cell_size-1))
