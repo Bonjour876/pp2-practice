@@ -1,0 +1,10 @@
+DB_NAME = "snake_game"
+DB_USER = "postgres"
+DB_PASSWORD = "Africa2008"
+DB_PORT = "5432"
+DB_HOST = "localhost"
+# Display settings
+WIDTH = 800
+HEIGHT = 600
+CELL_SIZE = 20
+FPS = 10

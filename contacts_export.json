@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Dmitry",
+        "email": "dima_tech@outlook.com",
+        "birthday": "1995-03-10",
+        "group": "Other",
+        "phones": "87059998877 (mobile)"
+    },
+    {
+        "name": "Tamerlan",
+        "email": "tam@gmail.com",
+        "birthday": "2000-01-01",
+        "group": "Friend",
+        "phones": "87771112233 (mobile)"
+    },
+    {
+        "name": "John",
+        "email": "ali.pro@yahoo.com",
+        "birthday": "1999-05-15",
+        "group": "Work",
+        "phones": "87015554433 (work)"
+    },
+    {
+        "name": "Aisulu",
+        "email": "sunshine@mail.ru",
+        "birthday": "2002-11-20",
+        "group": "Family",
+        "phones": "87770001122 (home)"
+    }
+]
